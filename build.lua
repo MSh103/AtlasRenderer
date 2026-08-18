@@ -17,6 +17,7 @@ project "AtlasRenderer"
                 "source",
                 "%{IncludeDir.AtlasLib}",
                 "%{IncludeDir.Glad}",
+                "%{IncludeDir.spdlog}",
                 "%{IncludeDir.glm}",
         }
 
