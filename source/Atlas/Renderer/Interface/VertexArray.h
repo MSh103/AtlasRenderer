@@ -18,6 +18,5 @@ namespace Atlas
 	private:
 		uint32_t m_RendererID;
 	};
-
 	
 }
