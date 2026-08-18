@@ -1,5 +1,6 @@
 #include "VertexArray.h"
 #include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 #include <Atlas/Core/Log.h>
 
@@ -44,6 +45,14 @@ namespace Atlas
 			index++;
 		}
 		m_VertexBuffers.push_back(vertexBuffer);
+	}
+
+	void VertexArray::SetIndexBuffer(const std::shared_ptr<IndexBuffer>& indexBuffer)
+	{
+		GLCall(glBindVertexArray(m_RendererID));
+		indexBuffer->Use();
+
+		m_IndexBuffer = indexBuffer;
 	}
 
 }

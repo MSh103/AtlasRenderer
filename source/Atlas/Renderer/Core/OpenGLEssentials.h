@@ -7,7 +7,10 @@
 	x;\
 	GLCheckError(#x, __FILE__, __LINE__);
 
-enum class Atlas::ShaderDataType;
+namespace Atlas
+{
+	enum class ShaderDataType;
+}
 
 void GLClearError();
 bool GLCheckError(const char* functionName, const char* filename, int lineNo);
