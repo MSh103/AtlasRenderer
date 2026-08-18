@@ -3,3 +3,8 @@
 ///----------------- CORE -------------------
 #include "Atlas/Renderer/Core/Math.h"
 ///------------------------------------------
+
+///--------------- INTERFACES ---------------
+#include "Atlas/Renderer/Interface/VertexArray.h"
+#include "Atlas/Renderer/Interface/VertexBuffer.h"
+///------------------------------------------
