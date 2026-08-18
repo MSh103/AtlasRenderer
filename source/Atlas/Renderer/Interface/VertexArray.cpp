@@ -1,7 +1,7 @@
 #include "VertexArray.h"
 #include "VertexBuffer.h"
 
-#include <Atlas/Core/Core.h>
+#include <Atlas/Core/Log.h>
 
 #include "Atlas/Renderer/Core/OpenGLEssentials.h"
 
@@ -30,11 +30,13 @@ namespace Atlas
 	{
 		GLCall(glCreateVertexArrays(1, &m_RendererID));
 		GLCall(glBindVertexArray(m_RendererID));
+		Atlas::Log::Core::Trace("Generated VertexArray: {}", m_RendererID);
 	}
 
 	VertexArray::~VertexArray()
 	{
 		GLCall(glDeleteVertexArrays(1, &m_RendererID));
+		Atlas::Log::Core::Trace("Deleted VertexArray: {}", m_RendererID);
 	}
 
 	void VertexArray::Use()

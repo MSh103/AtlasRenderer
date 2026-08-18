@@ -2,6 +2,8 @@
 
 #include "Atlas/Renderer/Core/OpenGLEssentials.h"
 
+#include <Atlas/Core/Log.h>
+
 namespace Atlas
 {
 
@@ -61,11 +63,13 @@ namespace Atlas
 		GLCall(glGenBuffers(1, &m_RendererID));
 		GLCall(glBindBuffer(GL_ARRAY_BUFFER, m_RendererID));
 		GLCall(glBufferData(GL_ARRAY_BUFFER, size, data, GL_STATIC_DRAW));
+		Atlas::Log::Core::Trace("Generated VertexBuffer: {}", m_RendererID);
 	}
 
 	VertexBuffer::~VertexBuffer()
 	{
 		GLCall(glDeleteBuffers(1, &m_RendererID));
+		Atlas::Log::Core::Trace("Deleted VertexBuffer: {}", m_RendererID);
 	}
 
 	void VertexBuffer::Use()
