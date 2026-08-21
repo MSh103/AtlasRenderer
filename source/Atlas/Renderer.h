@@ -8,4 +8,5 @@
 #include "Atlas/Renderer/Interface/VertexArray.h"
 #include "Atlas/Renderer/Interface/VertexBuffer.h"
 #include "Atlas/Renderer/Interface/IndexBuffer.h"
+#include "Atlas/Renderer/Interface/Shader.h"
 ///------------------------------------------
