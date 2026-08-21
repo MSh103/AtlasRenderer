@@ -113,6 +113,8 @@ namespace Atlas
 			GLCall(glDeleteShader(so));
 		}
 
+		m_ShaderObjects.clear();
+
 		return true;
 	}
 
